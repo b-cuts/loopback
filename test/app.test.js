@@ -705,10 +705,9 @@ describe('app', function() {
       done();
     });
 
-    it('throws error if model typeof string is passed', function(done) {
+    it('throws error if model typeof string is passed', function() {
       var fn = function() { app.model('MyTestModel'); };
-      expect(fn).to.throw(Error);
-      done();
+      expect(fn).to.throw(/app(\.model|\.registry)/);
     });
   });
 

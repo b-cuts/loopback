@@ -14,9 +14,9 @@ describe('remoting coercion', function() {
 
     var TestModel = app.registry.createModel('TestModel',
       {},
-      { base: 'Model', public: true }
+      { base: 'Model' }
     );
-    app.model(TestModel);
+    app.model(TestModel, { public: true });
 
     TestModel.test = function(inst, cb) {
       called = true;

@@ -27,7 +27,6 @@ describe('Registry', function() {
       var dsBar = appFoo.dataSource('dsBar', { connector: 'memory' });
 
       var FooModel = appFoo.registry.createModel(modelName, {}, settings);
-      // attach model to app and ds
       appFoo.model(FooModel, { dataSource: dsFoo });
 
       var FooSubModel = appFoo.registry.createModel(subModelName, {}, settings);

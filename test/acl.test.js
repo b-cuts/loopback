@@ -400,7 +400,6 @@ describe('access check', function() {
     app.enableAuth();
     app.dataSource('test', { connector: 'memory' });
     var MyTestModel = app.registry.createModel('MyTestModel');
-    // attach model to app and datasource
     app.model(MyTestModel, { dataSource: 'test' });
   });
 

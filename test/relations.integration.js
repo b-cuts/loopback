@@ -36,7 +36,7 @@ describe('relations - integration', function() {
       var Picture = app.registry.createModel('Picture',
         { name: 'string', imageableId: 'number', imageableType: 'string' });
 
-      app.model(Team, { dataSource: 'db' }); //attach model to app & datasource
+      app.model(Team, { dataSource: 'db' });
       app.model(Reader, { dataSource: 'db' });
       app.model(Picture, { dataSource: 'db' });
 
@@ -635,10 +635,8 @@ describe('relations - integration', function() {
          { id: 'string', name: 'string' }
       );
       var category = app.registry.createModel(
-
-       'category',
-         { id: 'string', name: 'string' }
-
+        'category',
+        { id: 'string', name: 'string' }
       );
       app.model(product, { dataSource: 'db' });
       app.model(category, { dataSource: 'db' });
@@ -875,7 +873,7 @@ describe('relations - integration', function() {
       var todoList = app.registry.createModel(
         'todoList',
         { name: 'string' },
-        {  plural: 'todo-lists' }
+        { plural: 'todo-lists' }
       );
       app.model(todoList, { dataSource: 'db' });
       var todoItem = app.registry.createModel(
