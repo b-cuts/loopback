@@ -25,11 +25,11 @@ describe('loopback.errorHandler(options)', function() {
       });
   });
 
-  it('should delete stack when options.includeStack is false', function(done) {
+  it('should delete stack when options.debug is false', function(done) {
     //arrange
     var app = loopback();
     app.use(loopback.urlNotFound());
-    app.use(loopback.errorHandler({ includeStack: false, log: false }));
+    app.use(loopback.errorHandler({ debug: false, log: false }));
 
     //act/assert
     request(app)
@@ -48,7 +48,7 @@ describe('loopback.errorHandler(options)', function() {
 
     var errorLogged;
     app.use(loopback.errorHandler({
-      includeStack: false,
+      debug: false,
       log: function customLogger(err, str, req) {
         errorLogged = err;
       },
